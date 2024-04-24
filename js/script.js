@@ -12,7 +12,7 @@ loginLink.addEventListener("click", () => {
 });
 
 closeButton.addEventListener("click", () => {
-  window.location.href = "../tbn-indonesia.html";
+  window.location.href = "../index.html";
 });
 
 function redirectToBookingPage() {
