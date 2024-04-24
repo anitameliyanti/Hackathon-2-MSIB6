@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  height: 40px;
+  margin-left: 20px;
+}
+
+.sidebar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.sidebar li {
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: #010101;
+  transition: color 0.3s;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: 010101;
+  transition: color 0.3s;
+}
+
+.profile-link i {
+  margin-left: 5px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.dropdown li {
+  list-style-type: none;
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown li:last-child {
+  border-bottom: none;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: color 0.3s;
+}
+
+.dropdown a:hover {
+  color: black;
+}
+
+.sidebar li a:hover {
+  color: #cbd400;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sidebar li .fa-user {
+  color: #010101;
+}
+.sidebar li:hover .fa-user {
+  color: #cbd400;
+}
+
+.privacy-policy-heading {
+  color: #cbd400;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.privacy {
+  color: #cbd400;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Mengatur tata letak vertikal */
+  align-items: center; /* Menengahkan konten secara horizontal */
+  margin-top: 80px;
+  margin-bottom: 15px;
+}
+
+.containers {
+  width: 500px;
+  height: 350px;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #C0BB3E;
+}
+
+.container-a {
+  border-top-left-radius: 85px;
+  border-bottom-right-radius: 85px;
+}
+
+.container-b {
+  border-top-right-radius: 85px;
+  border-bottom-left-radius: 85px;
+}
+
+@media screen and (max-width: 768px) {
+  .search input {
+    width: 100%;
+  }
+
+  .menu-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar li {
+    margin: 0 10px;
+  }
+
+  .privacy-policy-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .privacy {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}

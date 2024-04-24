@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body style="background: url(../img/bg-c.png) no-repeat;">
+    <div class="wrapper">
+        <span class="icon-close" id="closeButton" onclick="window.location.href = '../tbn-indonesia.html';"><ion-icon name="close"></ion-icon></span>
+        <div class="login-container login">
+            <h2>Event Booking</h2>
+            <form action="../php/booking.php" method="post">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" name="nama" required placeholder="Your Name">
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" name="email" required placeholder="Your Email">
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="calendar"></ion-icon></span>
+                    <input type="date" name="date" required>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="people"></ion-icon></span>
+                    <input type="number" name="attendence" min="1" required placeholder="Number of Attendees">
+                </div>
+                <button type="submit" class="btn">Book Now</button>
+            </form>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

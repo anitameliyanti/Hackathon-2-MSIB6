@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TBN Indonesia</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <!--sidebar-->
+    <header class="z-50">
+      <nav class="navbar flex justify-between items-center shadow shadow-black">
+        <div class="logo">
+          <img src="../img/logotbn.png" alt="TBN Indonesia Logo" />
+        </div>
+        <button class="menu-icon lg:hidden mr-7" onclick="toggleSidebar()">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ul class="sidebar hidden lg:flex">
+          <li><a href="../tbn-indonesia.html">Home</a></li>
+          <li><a href="#">Events</a></li>
+          <li class="dropdown-wrapper">
+            <div class="profile-link" onclick="toggleDropdown()">
+              Profile
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <ul class="dropdown" id="dropdown">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="/pages/partnership.html">Partnership</a></li>
+          <li>
+            <i
+              class="fas fa-user"
+              id="loginIcon"
+              onclick="redirectToLoginPage()"
+            ></i>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="parent-container">
+        <div class="containers container-a">Konten A</div>
+        <div class="containers container-b">Konten B</div>
+      </div>
+      
+
+    <!-- whatsapp -->
+    <a
+      href="https://api.whatsapp.com/send?phone=+6282310001908&text=Hi,%20Saya%20ingin%20bertanya%20tentang%20informasi%20TBN%20Indonesia"
+      target="_blank"
+      class="whatsapp-btn fixed bottom-4 right-4 z-50 animate-bounce"
+    >
+      <img
+        src="../img/whatsapp.png"
+        alt="WhatsApp"
+        class="w-16 md:w-20 lg:w-24"
+      />
+    </a>
+    <!-- End whatsapp -->
+
+    <footer class="bg-white text-gray-700 py-4 shadow-lg">
+      <div
+        class="container mx-auto flex flex-col lg:flex-row justify-between items-center mb-4 lg:mb-4"
+      >
+        <!-- Bagian Contact Us -->
+        <div class="text-center lg:text-left lg:mr-4 mb-4 lg:mb-0">
+          <img
+            src="../img/logotbn.png"
+            alt="TBN Indonesia Logo"
+            class="w-16 mb-2"
+          />
+          <p class="text-xs">Lippo Thamrin Lt.5 #0503</p>
+          <p class="text-xs">Jl. M.H.Thamrin No.20, Menteng</p>
+          <p class="text-xs">Jakarta Pusat 10350, Indonesia</p>
+          <p class="text-xs">WhatsApp: +62823 1000 1908</p>
+          <p class="text-xs">Email: info@tbnindonesia.org</p>
+        </div>
+
+        <div class="text-center lg:text-left mb-2 lg:mb-0">
+          <h3 class="font-semibold mb-2">Connect With Us</h3>
+          <div class="flex justify-center lg:justify-start">
+            <a
+              href="https://api.whatsapp.com/send?phone=+6282310001908&text=Hi,%20Saya%20ingin%20bertanya%20tentang%20informasi%20TBN%20Indonesia"
+              class="mr-2"
+            >
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+            <a href="link_email" class="mr-2">
+              <ion-icon name="mail"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/tbn.indonesia/" class="mr-2">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/tbn-indonesia-210705251/"
+              class="mr-2"
+            >
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCnal-hHUTJRGKl5N0S79Gbg"
+              class="mr-2"
+            >
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr
+        class="border-gray-600 w-3/4 mt-4 mb-4 mx-auto px-4 pl-1 pr-1 hidden md:block"
+      />
+      <div
+        class="container mx-auto flex justify-between text-sm hidden md:flex"
+      >
+        <p class="ml-4">Terms Privacy Policy</p>
+        <p class="mr-4">&copy; 2023 TBN Indonesia. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+      function toggleDropdown() {
+        var dropdown = document.getElementById("dropdown");
+        dropdown.style.display =
+          dropdown.style.display === "none" ? "block" : "none";
+      }
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.classList.toggle("hidden");
+      }
+      const menuIcon = document.querySelector(".menu-icon");
+      menuIcon.addEventListener("click", toggleSidebar);
+      function redirectToLoginPage() {
+        window.location.href = "./pages/login.html";
+      }
+    </script>
+  </body>
+</html>
